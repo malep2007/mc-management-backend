@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.views import get_swagger_view 
+
+schema_view = get_swagger_view(title="MC Management API")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/auth/', include('authentication.urls')),
+    path('api/v1/doc/', schema_view),
 ]
