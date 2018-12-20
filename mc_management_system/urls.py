@@ -21,6 +21,7 @@ schema_view = get_swagger_view(title="MC Management API")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/auth/', include('authentication.urls')),
     path('api/v1/doc/', schema_view),
+    path('api/v1/auth/', include('authentication.urls')),
+    path('api/v1/mc/', include('missional_community.urls')),
 ]
