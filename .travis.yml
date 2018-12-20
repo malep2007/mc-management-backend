@@ -9,7 +9,7 @@ env:
   global:
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
     # - CODECLIMATE_REPO_TOKEN=.env.TEST_REPORTER_ID
-    - CC_TEST_REPORTER_ID=CC_TEST_REPORTER_ID
+    - CC_TEST_REPORTER_ID="de0a56705e646e93a0334b020c2c800dbbe4f0a778b6f5bd00f9521bb3bdb720"
 
 # command to install dependencies
 install:
